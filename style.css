@@ -53,3 +53,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-off
 .chef-mascot-trigger:focus-visible{outline:3px solid #ffd35a;outline-offset:3px;border-radius:18px}
 @media(max-width:760px){.chef-mascot{left:4px;bottom:75px;width:104px}.chef-mascot-trigger{width:100px;height:108px}.chef-mascot-trigger img{width:96px;height:103px}.chef-mascot-bubble{bottom:112px;width:min(230px,calc(100vw - 24px));padding:10px 11px}.chef-mascot-bubble p{font-size:11px}.chef-mascot-label{font-size:7px}}
 @media(prefers-reduced-motion:reduce){.chef-mascot-trigger,.chef-mascot-bubble{transition:none!important}}
+
+.chef-mascot{transition:left 1.1s cubic-bezier(.2,.75,.2,1)}
+.chef-mascot.on-right .chef-mascot-bubble{left:auto;right:5px;border-radius:16px 16px 5px 16px;transform-origin:bottom right}
+.chef-mascot.on-right .chef-mascot-bubble:after{left:auto;right:19px}

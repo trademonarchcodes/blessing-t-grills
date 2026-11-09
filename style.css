@@ -25,7 +25,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-off
 
 /* Blessing T live chef mascot: cropped from the approved logo artwork, plate excluded */
 .live-mascot{position:fixed;z-index:39;left:14px;bottom:18px;width:154px;height:224px;display:flex;align-items:flex-end;justify-content:center;pointer-events:auto;animation:chef-walk 1.05s ease-in-out infinite;transform-origin:50% 100%;filter:drop-shadow(0 12px 12px #0008)}
-.mascot-window{position:relative;display:block;width:154px;height:194px;overflow:hidden;isolation:isolate}
+.mascot-window{position:relative;display:block;width:154px;height:178px;overflow:hidden;isolation:isolate}
 .mascot-window img{position:absolute;display:block!important;visibility:visible!important;max-width:none;width:338px;height:338px;left:-35px;top:-5px;object-fit:cover;object-position:top left;mix-blend-mode:screen}
 .mascot-speech{position:absolute;z-index:2;left:38px;top:0;padding:7px 11px;background:#fff8e9;color:#20150d;border:2px solid #f2b52e;border-radius:15px 15px 15px 4px;font:800 10px/1.2 var(--body);white-space:nowrap;box-shadow:0 5px 15px #0005;animation:chef-bubble 2.4s ease-in-out infinite}
 .mascot-speech b{color:#bd2c1c}
@@ -33,5 +33,5 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-off
 @keyframes chef-bubble{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 .live-mascot:hover{animation-duration:.42s;filter:drop-shadow(0 14px 18px #ffb52b55)}
 .live-mascot:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:16px}
-@media(max-width:760px){.live-mascot{left:3px;bottom:58px;width:112px;height:170px}.mascot-window{width:112px;height:145px}.mascot-window img{width:246px;height:246px;left:-25px;top:-4px}.mascot-speech{left:28px;top:0;padding:6px 8px;font-size:8px}}
+@media(max-width:760px){.live-mascot{left:3px;bottom:58px;width:112px;height:170px}.mascot-window{width:112px;height:128px}.mascot-window img{width:246px;height:246px;left:-25px;top:-4px}.mascot-speech{left:28px;top:0;padding:6px 8px;font-size:8px}}
 @media(prefers-reduced-motion:reduce){.live-mascot,.mascot-speech{animation:none!important}}

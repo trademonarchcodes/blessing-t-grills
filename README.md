@@ -15,3 +15,6 @@ Open index.html in a browser. No build step is required.
 Connect this GitHub repository to Cloudflare Pages. Framework preset: None. Build command: leave blank. Build output directory: / (repository root).
 
 Footer credit: Designed & Developed by DEVLYON — https://devlyon.pages.dev/
+
+
+Deployment trigger: Cloudflare Pages project `blessingtgrills` is connected to this repository on the `main` branch.

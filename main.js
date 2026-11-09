@@ -27,7 +27,7 @@ document.querySelectorAll('img').forEach(img=>{img.addEventListener('error',()=>
  btn.addEventListener('click',()=>{if(btn.getAttribute('aria-expanded')==='true'){open(false);return;}greet();clearTimeout(hideTimer);hideTimer=setTimeout(()=>open(false),6500);});
  root.querySelectorAll('.chef-mascot-actions a').forEach(a=>a.addEventListener('click',()=>open(false)));
  if('IntersectionObserver'in window){
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){active=entry.target.id;msg.textContent=sections[active]||sections.home;}}),{rootMargin:'-38% 0px -48% 0px'});
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){active=entry.target.id;msg.textContent=sections[active]||sections.home;const mobile=window.matchMedia('(max-width:760px)').matches;const right=['menu','gallery'].includes(active);root.classList.toggle('on-right',right);root.style.left=right?(mobile?'calc(100vw - 112px)':'calc(100vw - 164px)'):(mobile?'4px':'14px');}}),{rootMargin:'-38% 0px -48% 0px'});
   anchors.map(id=>document.getElementById(id)).filter(Boolean).forEach(el=>observer.observe(el));
  }
  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;

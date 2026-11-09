@@ -36,3 +36,20 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-off
 @media(max-width:760px){.live-mascot{left:3px;bottom:58px;width:112px;height:170px}.mascot-window{width:112px;height:128px}.mascot-window img{width:246px;height:246px;left:-25px;top:-4px}.mascot-speech{left:28px;top:0;padding:6px 8px;font-size:8px}}
 @media(prefers-reduced-motion:reduce){.live-mascot,.mascot-speech{animation:none!important}}
 
+
+/* Blessing T animated chef ambassador */
+.chef-mascot{position:fixed;z-index:40;left:14px;bottom:82px;width:142px;display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none;filter:drop-shadow(0 9px 15px #0009)}
+.chef-mascot-trigger{width:136px;height:145px;padding:0;border:0;background:transparent;display:grid;place-items:end center;cursor:pointer;pointer-events:auto;transition:transform .25s}
+.chef-mascot-trigger:hover{transform:translateY(-4px) scale(1.04)}
+.chef-mascot-trigger img{width:128px;height:135px;object-fit:contain;image-rendering:auto}
+.chef-mascot.is-waving .chef-mascot-trigger{transform:rotate(-2deg) translateY(-3px)}
+.chef-mascot-bubble{position:absolute;bottom:150px;left:5px;width:min(255px,calc(100vw - 34px));padding:13px 14px;background:#fff8e9;color:#21170f;border:2px solid #e7ad24;border-radius:16px 16px 16px 5px;box-shadow:0 12px 32px #0008;opacity:0;visibility:hidden;transform:translateY(8px);transition:.22s;pointer-events:none}
+.chef-mascot.is-open .chef-mascot-bubble{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.chef-mascot-bubble p{margin:0 0 10px;font-weight:800;font-size:12px;line-height:1.5}
+.chef-mascot-actions{display:flex;flex-wrap:wrap;gap:6px}
+.chef-mascot-actions a{padding:7px 9px;border-radius:20px;background:#19130e;color:#ffd35a;font-size:10px;font-weight:800}
+.chef-mascot-actions a:hover{background:#a92d20;color:white}
+.chef-mascot-label{padding:4px 8px;border:1px solid #e7ad24;border-radius:20px;background:#17130f;color:#ffd35a;font-size:8px;font-weight:800;letter-spacing:.5px}
+.chef-mascot-trigger:focus-visible{outline:3px solid #ffd35a;outline-offset:3px;border-radius:18px}
+@media(max-width:760px){.chef-mascot{left:4px;bottom:75px;width:104px}.chef-mascot-trigger{width:100px;height:108px}.chef-mascot-trigger img{width:96px;height:103px}.chef-mascot-bubble{bottom:112px;width:min(230px,calc(100vw - 24px));padding:10px 11px}.chef-mascot-bubble p{font-size:11px}.chef-mascot-label{font-size:7px}}
+@media(prefers-reduced-motion:reduce){.chef-mascot-trigger,.chef-mascot-bubble{transition:none!important}}

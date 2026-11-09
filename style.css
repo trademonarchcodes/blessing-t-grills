@@ -35,3 +35,30 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-off
 .live-mascot:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:16px}
 @media(max-width:760px){.live-mascot{left:3px;bottom:58px;width:112px;height:170px}.mascot-window{width:112px;height:128px}.mascot-window img{width:246px;height:246px;left:-25px;top:-4px}.mascot-speech{left:28px;top:0;padding:6px 8px;font-size:8px}}
 @media(prefers-reduced-motion:reduce){.live-mascot,.mascot-speech{animation:none!important}}
+
+
+/* Premium animated chef ambassador */
+.chef-mascot{--chef-x:3%;position:fixed;z-index:38;left:var(--chef-x);bottom:82px;width:156px;display:flex;flex-direction:column;align-items:center;gap:2px;pointer-events:none;transition:left 1.25s cubic-bezier(.2,.75,.2,1);filter:drop-shadow(0 10px 16px #0008)}
+.chef-mascot-trigger{width:148px;height:154px;padding:0;display:grid;place-items:end center;border:0;background:transparent;cursor:pointer;pointer-events:auto;transition:transform .3s ease;transform-origin:50% 100%}
+.chef-mascot-trigger:hover{transform:translateY(-5px) scale(1.035)}
+.chef-mascot-trigger img{width:140px;height:146px;object-fit:contain;object-position:center bottom;image-rendering:auto}
+.chef-mascot.is-waving .chef-mascot-trigger{transform:translateY(-4px) rotate(-2deg)}
+.chef-mascot-bubble{position:absolute;bottom:160px;left:8px;width:min(260px,calc(100vw - 42px));padding:14px 15px 12px;background:#fff8e9;color:#21170f;border:2px solid #e8ad35;border-radius:17px 17px 17px 5px;box-shadow:0 12px 35px #0007;opacity:0;visibility:hidden;transform:translateY(8px) scale(.97);transform-origin:bottom left;transition:opacity .22s,transform .22s,visibility .22s;pointer-events:none}
+.chef-mascot.is-open .chef-mascot-bubble{opacity:1;visibility:visible;transform:translateY(0) scale(1);pointer-events:auto}
+.chef-mascot-bubble:after{content:"";position:absolute;left:19px;bottom:-9px;width:14px;height:14px;background:#fff8e9;border-right:2px solid #e8ad35;border-bottom:2px solid #e8ad35;transform:rotate(45deg)}
+.chef-mascot-bubble p{margin:0 0 11px;font:800 12px/1.55 var(--body)}
+.chef-mascot-actions{display:flex;flex-wrap:wrap;gap:6px}
+.chef-mascot-actions a{padding:6px 9px;border-radius:999px;background:#21170f;color:#ffd36a;font:800 9px/1.2 var(--body);transition:background .2s,color .2s,transform .2s}
+.chef-mascot-actions a:hover{background:#b92d21;color:#fff;transform:translateY(-2px)}
+.chef-mascot-label{padding:4px 9px;border:1px solid #e8ad3580;border-radius:999px;background:#17130fdd;color:#ffd36a;font:800 8px/1.3 var(--body);letter-spacing:.7px;opacity:.86;pointer-events:none}
+.chef-mascot-trigger:focus-visible{outline:3px solid #ffd36a;outline-offset:2px;border-radius:20px}
+@media(max-width:760px){
+ .chef-mascot{bottom:78px;width:112px;left:var(--chef-x);gap:0}
+ .chef-mascot-trigger{width:108px;height:116px}
+ .chef-mascot-trigger img{width:104px;height:109px}
+ .chef-mascot-bubble{bottom:121px;left:0;width:min(236px,calc(100vw - 34px));padding:11px 12px}
+ .chef-mascot-bubble p{font-size:11px}
+ .chef-mascot-label{font-size:7px}
+}
+@media(max-width:390px){.chef-mascot{bottom:75px}.chef-mascot-trigger{width:94px;height:104px}.chef-mascot-trigger img{width:94px;height:99px}.chef-mascot-bubble{bottom:108px}}
+@media(prefers-reduced-motion:reduce){.chef-mascot,.chef-mascot-trigger,.chef-mascot-bubble,.chef-mascot-actions a{transition:none!important}}
